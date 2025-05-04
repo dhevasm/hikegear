@@ -1,0 +1,167 @@
+const products = [
+  {
+    id: 1,
+    name: "Outdoor Hiking Backpack",
+    category: "Backpack",
+    price: 900000,
+    isNew: true,
+    date: new Date("2023-11-25"),
+    link: "https://tokopedia.link/NMWbxEEf5Sb",
+    image: "src/img/product/product1.webp",
+    description: "Ransel hiking tahan lama dan ringan, cocok untuk kegiatan luar ruangan dan petualangan panjang."
+  },
+  {
+    id: 2,
+    name: "Waterproof Camping Tent",
+    category: "Equipment",
+    price: 2149990,
+    isNew: true,
+    date: new Date("2023-11-20"),
+    link: "https://tokopedia.link/DaVNFGDf5Sb",
+    image: "src/img/product/product2.webp",
+    description: "Tenda camping tahan air yang ideal untuk perlindungan di segala cuaca."
+  },
+  {
+    id: 3,
+    name: "Trekking Poles",
+    category: "Accessories",
+    price: 300000,
+    isNew: false,
+    date: new Date("2023-10-15"),
+    link: "https://tokopedia.link/jFVU8cVf5Sb",
+    image: "src/img/product/product3.jpg",
+    description: "Tongkat trekking ringan dan kokoh untuk membantu keseimbangan saat mendaki."
+  },
+  {
+    id: 4,
+    name: "Hiking Boots",
+    category: "Footwear",
+    price: 1432000,
+    isNew: true,
+    date: new Date("2023-11-28"),
+    link: "https://tokopedia.link/01EKZF8f5Sb",
+    image: "src/img/product/product4.png",
+    description: "Sepatu hiking berkualitas tinggi dengan daya cengkeram yang kuat dan tahan air."
+  },
+  {
+    id: 5,
+    name: "Down Sleeping Bag",
+    category: "Equipment",
+    price: 1050044,
+    isNew: false,
+    date: new Date("2023-10-05"),
+    link: "https://tokopedia.link/vhCQ8kgg5Sb",
+    image: "src/img/product/product5.png",
+    description: "Sleeping bag hangat dan ringan, cocok untuk camping di suhu dingin."
+  },
+  {
+    id: 6,
+    name: "Outdoor Cooking Stove",
+    category: "Cooking",
+    price: 260000,
+    isNew: false,
+    date: new Date("2023-09-28"),
+    link: "https://tokopedia.link/rxeYEvrg5Sb",
+    image: "src/img/product/product6.jpg",
+    description: "Kompor portable yang efisien untuk memasak di alam terbuka."
+  },
+  {
+    id: 7,
+    name: "Hiking GPS Navigator",
+    category: "Navigation",
+    price: 699300,
+    isNew: true,
+    date: new Date("2023-11-15"),
+    link: "https://tokopedia.link/7KBlFDxg5Sb",
+    image: "src/img/product/product7.jpg",
+    description: "Perangkat GPS portabel untuk navigasi hiking yang akurat dan andal."
+  },
+  {
+    id: 8,
+    name: "Quick-Dry Hiking Shirt",
+    category: "Apparel",
+    price: 250000,
+    isNew: false,
+    date: new Date("2023-10-22"),
+    link: "https://tokopedia.link/Q6xXR0Fg5Sb",
+    image: "src/img/product/product8.jpg",
+    description: "Kaos hiking cepat kering dan nyaman, cocok untuk aktivitas outdoor."
+  },
+  {
+    id: 9,
+    name: "Water Filtration System",
+    category: "Equipment",
+    price: 2350000,
+    isNew: false,
+    date: new Date("2023-09-15"),
+    link: "https://tokopedia.link/BGe4S1Mg5Sb",
+    image: "src/img/product/product9.webp",
+    description: "Sistem filtrasi air portabel untuk menjamin air minum yang bersih di alam."
+  },
+  {
+    id: 10,
+    name: "Camping Headlamp",
+    category: "Navigation",
+    price: 195000,
+    isNew: true,
+    date: new Date("2023-11-10"),
+    link: "https://tokopedia.link/rFQODARg5Sb",
+    image: "src/img/product/product10.jpg",
+    description: "Lampu kepala terang dan ringan, sangat membantu saat aktivitas malam hari."
+  },
+  {
+    id: 11,
+    name: "Thermal Hiking Socks",
+    category: "Accessories",
+    price: 200000,
+    isNew: false,
+    date: new Date("2023-10-12"),
+    link: "https://tokopedia.link/AEuHA9Wg5Sb",
+    image: "src/img/product/product11.png",
+    description: "Kaos kaki thermal yang menjaga kaki tetap hangat selama perjalanan."
+  },
+  {
+    id: 12,
+    name: "Hiking Cargo Pants",
+    category: "Apparel",
+    price: 119000,
+    isNew: false,
+    date: new Date("2023-10-08"),
+    link: "https://tokopedia.link/gap9cs1g5Sb",
+    image: "src/img/product/product12.webp",
+    description: "Celana hiking cargo yang kuat dan praktis dengan banyak kantong penyimpanan."
+  },
+  {
+    id: 13,
+    name: "Collapsible Water Bottle",
+    category: "Accessories",
+    price: 95000,
+    isNew: false,
+    date: new Date("2023-09-20"),
+    link: "https://tokopedia.link/VcQ2NE5g5Sb",
+    image: "src/img/product/product13.webp",
+    description: "Botol air lipat yang ringan dan hemat ruang untuk dibawa bepergian."
+  },
+  {
+    id: 14,
+    name: "Solar Power Bank",
+    category: "Accessories",
+    price: 291000,
+    isNew: true,
+    date: new Date("2023-11-05"),
+    link: "https://tokopedia.link/LGOOgibh5Sb",
+    image: "src/img/product/product14.jpg",
+    description: "Power bank tenaga surya untuk mengisi daya perangkat saat di luar ruangan."
+  },
+  {
+    id: 15,
+    name: "Portable Camping Chair",
+    category: "Equipment",
+    price: 129000,
+    isNew: false,
+    date: new Date("2023-09-10"),
+    link: "https://tokopedia.link/KMoN0Qeh5Sb",
+    image: "src/img/product/product15.webp",
+    description: "Kursi lipat ringan dan nyaman untuk bersantai saat berkemah."
+  },
+];
