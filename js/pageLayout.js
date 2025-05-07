@@ -83,15 +83,15 @@ const navbar = ` <link rel="stylesheet" href="../css/layout.css">
 
 const footer = `   
 <div class="footer-top">
-  <p><b>HikeGear</b> is a trusted Indonesian e-commerce brand offering a wide range of equipment and accessories for outdoor adventures. Tailored for tropical climates, HikeGear delivers high-quality gear including outdoor apparel, hiking boots, backpacks, and camping essentials. With designs that are both functional and stylish, HikeGear supports activities like mountain trekking, nature exploration, and everyday adventure-inspired lifestyles.</p>
+  <p><b>Sketdoor</b> is a trusted Indonesian e-commerce brand offering a wide range of equipment and accessories for outdoor adventures. Tailored for tropical climates, Sketdoor delivers high-quality gear including outdoor apparel, hiking boots, backpacks, and camping essentials. With designs that are both functional and stylish, Sketdoor supports activities like mountain trekking, nature exploration, and everyday adventure-inspired lifestyles.</p>
   
-  <p>Start your journey with HikeGear and explore our collection of original, reliable outdoor gear at great prices and with exciting promotions. Enjoy a smooth and flexible shopping experience with payment options like bank transfers, paylater, and COD. The process is safe, quick, and convenient—ensuring full support from HikeGear at every step of your adventure.</p>
+  <p>Start your journey with Sketdoor and explore our collection of original, reliable outdoor gear at great prices and with exciting promotions. Enjoy a smooth and flexible shopping experience with payment options like bank transfers, paylater, and COD. The process is safe, quick, and convenient—ensuring full support from Sketdoor at every step of your adventure.</p>
 </div>
 
 <footer class="footer">
       <div class="footer-container">
         <div class="footer-section">
-          <h4>HIKEGEAR</h4>
+          <h4>Sketdoor</h4>
           <a href="../5-Revan Agus Widyantara/about.html">Tentang Kami</a>
           <a href="../5-Revan Agus Widyantara/about.html">Karir</a>
           <a href="../5-Revan Agus Widyantara/about.html">Lokasi Toko</a>
@@ -121,10 +121,10 @@ const footer = `
         <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 HikeGear Produk Industri, Inc. All rights reserved.</p>
+        <p>© 2025 Sketdoor Produk Industri, Inc. All rights reserved.</p>
         <p>
           CS 24 Jam:
-          <a href="mailto:cs@eigeradventure.com">cs@hikegear.com</a> |
+          <a href="mailto:cs@eigeradventure.com">cs@Sketdoor.com</a> |
           <a href="https://wa.me/628112311632">+62 811 2311 632</a>
         </p>
       </div>
