@@ -77,6 +77,10 @@
               <div class="product-price mb-4">
                 <h2 class="price-tag" id="productPrice">Rp...</h2>
               </div>
+
+              <div class="product-stock mb-4">
+                <h2 class="stock-tag" id="productStock" style="font-size: 20px !important;">Stock : 10</h2>
+              </div>
               
               <div class="product-description mb-4">
                 <h3>Description</h3>
@@ -88,7 +92,7 @@
                   <label for="quantity" class="form-label">Quantity:</label>
                   <div class="input-group" style="max-width: 150px;">
                     <button class="btn btn-outline-secondary" type="button" id="decrease">-</button>
-                    <input type="number" class="form-control text-center" id="quantity" value="1" min="1">
+                    <input type="number" class="form-control text-center" id="quantity" value="1" min="1" onblur="checkQuantity()">
                     <button class="btn btn-outline-secondary" type="button" id="increase">+</button>
                   </div>
                 </div>
@@ -96,7 +100,7 @@
                 <div class="d-grid gap-2">
                   <button class="btn btn-primary" id="addToCart">
                     <i class="fas fa-shopping-cart me-2"></i> Add to Cart
-                  </button>
+                  </button> 
                 </div>
               </div>
               
@@ -170,7 +174,11 @@
         const decreaseBtn = document.getElementById('decrease');
         
         increaseBtn.addEventListener('click', () => {
-          quantityInput.value = parseInt(quantityInput.value) + 1;
+          if(parseInt(quantityInput.value) < productData.stock) {
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+          } else {
+            alert('Cannot exceed available stock');
+          }
         });
         
         decreaseBtn.addEventListener('click', () => {
@@ -178,6 +186,12 @@
             quantityInput.value = parseInt(quantityInput.value) - 1;
           }
         });
+
+        const checkQuantity = () => {
+          if (parseInt(quantityInput.value) > productData.stock) {
+            quantityInput.value = productData.stock;
+          }
+        };
         
         // Cart functionality with localStorage
         const cartManager = {
@@ -228,7 +242,7 @@
             return cart.reduce((total, item) => total + item.quantity, 0);
           }
         };
-        
+
         // Function to update product data in the UI
         function updateProductUI() {
           // Update product details in the UI
@@ -237,6 +251,22 @@
           document.getElementById('productCategory').textContent = productData.category;
           document.getElementById('productId').textContent = productData.id;
           document.getElementById('productPrice').textContent = formatPrice(productData.price);
+          if (productData.stock > 0) {
+            document.getElementById('productStock').textContent = "Stock : " + productData.stock;
+            document.getElementById('addToCart').disabled = false;
+              // Update shop link
+          const shopLink = document.getElementById('shopLink');
+          if (shopLink && productData.link) {
+            shopLink.href = productData.link;
+          }
+          } else {
+            document.getElementById('addToCart').disabled = true;
+            document.getElementById('increase').disabled = true;
+            document.getElementById('decrease').disabled = true;
+            document.getElementById('shopLink').setAttribute('href', '#');
+             document.getElementById('shopLink').setAttribute('target', '');
+            document.getElementById('productStock').innerHTML = '<span class="badge bg-danger">Out of Stock</span>';
+          }
           document.getElementById('breadcrumbProductCategory').textContent = productData.category;
           document.getElementById('productDescription').textContent = productData.description;
           document.getElementById('breadcrumbProductCategory').setAttribute('href', `../4-Jawi Arung Samudra/category.html?category=${productData.category}`);
@@ -246,12 +276,6 @@
           if (productImage && productData.image) {
             productImage.src = `../${productData.image}`;
             productImage.alt = productData.name;
-          }
-          
-          // Update shop link
-          const shopLink = document.getElementById('shopLink');
-          if (shopLink && productData.link) {
-            shopLink.href = productData.link;
           }
           
           // Update release date
@@ -282,7 +306,6 @@
           
           // Add to cart
           cartManager.addToCart(productData, quantity);
-          
           // Update UI
           updateCartCounter();
           
